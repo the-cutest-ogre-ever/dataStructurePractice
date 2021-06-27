@@ -3,6 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import sorting.BubbleSort;
 import sorting.InsertionSort;
+import sorting.SelectionSort;
 
 public class SortTest {
 
@@ -17,13 +18,22 @@ public class SortTest {
 
     @Test
     void BubbleSortTest() {
-        int[] resultArray = BubbleSort.sort(sourceArray);
-        Assertions.assertArrayEquals(expectedArray, resultArray);
+        BubbleSort.sort(sourceArray);
+        Assertions.assertArrayEquals(expectedArray, sourceArray);
     }
 
     @Test
-    void InsetrionSortTest() {
-        int[] resultArray = InsertionSort.sort(sourceArray);
-        Assertions.assertArrayEquals(expectedArray, resultArray);
+    void InsertionSortTest() {
+        InsertionSort.sort(sourceArray);
+        Assertions.assertArrayEquals(expectedArray, sourceArray);
+    }
+
+    @Test
+    void SelectionSortTest() {
+        int minInd = SelectionSort.getMinInd(sourceArray, 4, sourceArray.length);
+        Assertions.assertEquals(8, minInd);
+
+        SelectionSort.sort(sourceArray);
+        Assertions.assertArrayEquals(expectedArray, sourceArray);
     }
 }

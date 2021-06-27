@@ -1,4 +1,7 @@
+import sorting.BubbleSort;
 import sorting.InsertionSort;
+import sorting.SelectionSort;
+
 import java.util.Arrays;
 
 public class Main {
@@ -10,8 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
         int[] array = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
+        int[] array2 = {5, 6, 4, 7, 3, 0};
 
-        printArray(InsertionSort.sort(array));
+        //printArray(BubbleSort.sort(array2));
+        //printArray(SelectionSort.sort(array2));
     }
 
 }
