@@ -15,7 +15,8 @@ public class Main {
         int[] array = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
         int[] array2 = {5, 6, 4, 7, 3, 0};
 
-        //printArray(BubbleSort.sort(array2));
+        BubbleSort.sort(array);
+        printArray(array);
         //printArray(SelectionSort.sort(array2));
     }
 
