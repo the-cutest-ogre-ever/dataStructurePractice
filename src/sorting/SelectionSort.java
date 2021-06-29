@@ -5,10 +5,8 @@ public class SelectionSort {
     public static int getMinInd(int[] array, int unsortedInd, int length) {
         int minInd = unsortedInd;
 
-        for (int i = unsortedInd + 1; i < length; i++) {
-            if (array[i] < array[minInd])
-                minInd = i;
-        }
+        for (int i = unsortedInd + 1; i < length; i++)
+            minInd = array[i] < array[minInd] ? i : minInd;
         return minInd;
     }
 
