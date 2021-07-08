@@ -61,6 +61,15 @@ public class SortTest {
     }
 
     @Test
+    void mergeSortTest() {
+        MergeSort.sort(sourceArrayPositive);
+        Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
+
+        MergeSort.sort(sourceArrayMixed);
+        Assertions.assertArrayEquals(expectedArrayMixed, sourceArrayMixed);
+    }
+
+    @Test
     void quickSortTest() {
         QuickSort.sort(sourceArrayPositive);
         Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
@@ -84,6 +93,15 @@ public class SortTest {
         Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
 
         SelectionSort.sort(sourceArrayMixed);
+        Assertions.assertArrayEquals(expectedArrayMixed, sourceArrayMixed);
+    }
+
+    @Test
+    void shellSortTest() {
+        ShellSort.sort(sourceArrayPositive);
+        Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
+
+        ShellSort.sort(sourceArrayMixed);
         Assertions.assertArrayEquals(expectedArrayMixed, sourceArrayMixed);
     }
 }

@@ -32,9 +32,9 @@ public class Main {
         BucketSort.sort(array3);
         printArray(array3);
 */
-        printArray(sourceArray);
-        ShellSort.sort(sourceArray);
-        printArray(sourceArray);
+        printArray(array2);
+        MergeSort.sort(array2);
+        printArray(array2);
     }
 
 }
