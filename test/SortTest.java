@@ -52,6 +52,15 @@ public class SortTest {
     }
 
     @Test
+    void heapSortTest() {
+        HeapSort.sort(sourceArrayPositive);
+        Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
+
+        HeapSort.sort(sourceArrayMixed);
+        Assertions.assertArrayEquals(expectedArrayMixed, sourceArrayMixed);
+    }
+
+    @Test
     void insertionSortTest() {
         InsertionSort.sort(sourceArrayPositive);
         Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
