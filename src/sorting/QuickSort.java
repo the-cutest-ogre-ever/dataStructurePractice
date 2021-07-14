@@ -1,14 +1,6 @@
 package sorting;
 
-import java.util.Arrays;
-
 public class QuickSort {
-
-    private static void swap(int[] array, int leftIndex, int rightIndex) {
-        int temp = array[leftIndex];
-        array[leftIndex] = array[rightIndex];
-        array[rightIndex] = temp;
-    }
 
     private static void splitArray(int[] array, int beginIndex, int endIndex) {
         if (beginIndex < endIndex) {
@@ -18,10 +10,10 @@ public class QuickSort {
             for (int i = beginIndex; i < endIndex; i++) {
                 if (array[i] <= pivot) {
                     leftPointer++;
-                    swap(array, leftPointer, i);
+                    SortingUtils.swap(array, leftPointer, i);
                 }
             }
-            swap(array, endIndex, leftPointer + 1);
+            SortingUtils.swap(array, endIndex, leftPointer + 1);
             splitArray(array, beginIndex, leftPointer);
             splitArray(array, leftPointer + 1, endIndex);
         }

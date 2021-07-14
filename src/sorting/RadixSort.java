@@ -2,15 +2,7 @@ package sorting;
 
 public class RadixSort {
 
-    public static int getMax(int[] array) {
-        int max = array[0];
-
-        for (int i = 1; i < array.length; i++)
-            max = array[i] > max ? array[i] : max;
-        return max;
-    }
-
-    public static void countingSort(int[] array, int max, int pos) {
+    private static void countingSort(int[] array, int max, int pos) {
         int length = array.length;
         int[] resultArray = new int[length + 1];
 
@@ -31,7 +23,7 @@ public class RadixSort {
     }
 
     public static void sort(int[] array) {
-        int max = getMax(array);
+        int max = SortingUtils.getMax(array);
 
         for (int pos = 1; max / pos > 0; pos *= 10)
              countingSort(array, max, pos);

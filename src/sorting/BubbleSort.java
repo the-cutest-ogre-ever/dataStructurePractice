@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 public class BubbleSort {
 
     public static void sort(int[] array) {

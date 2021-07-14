@@ -44,9 +44,6 @@ public class SortTest {
 
     @Test
     void countingSortTest() {
-        int max = CountingSort.getMax(sourceArrayPositive);
-        Assertions.assertEquals(122, max);
-
         CountingSort.sort(sourceArrayPositive);
         Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
     }
@@ -95,9 +92,6 @@ public class SortTest {
 
     @Test
     void selectionSortTest() {
-        int minInd = SelectionSort.getMinInd(sourceArrayPositive, 4, sourceArrayPositive.length);
-        Assertions.assertEquals(8, minInd);
-
         SelectionSort.sort(sourceArrayPositive);
         Assertions.assertArrayEquals(expectedArrayPositive, sourceArrayPositive);
 
